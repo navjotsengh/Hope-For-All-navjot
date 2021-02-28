@@ -52,11 +52,14 @@ public class UserRegistration extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.tvLogIn:
-                //TODO: implement log in activity
+                login();
                 break;
         }
     }
-
+        private void login(){
+            Intent intent = new Intent(this, UserLogin.class);
+            startActivity(intent);
+        }
     private void createAccount() {
 
         inputUserName = userName.getText().toString().trim();
